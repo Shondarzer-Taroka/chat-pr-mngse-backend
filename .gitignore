@@ -1,0 +1,4 @@
+.env
+garbase
+node_modules
+vercel.json
