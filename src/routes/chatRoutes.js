@@ -5,5 +5,6 @@ const { getChats, getOrCreateChat, getMessages } = require('../controllers/chatC
 router.get('/', getChats);
 router.post('/', getOrCreateChat);
 router.get('/:chatId/messages', getMessages);
+router.post('/get-or-create', getOrCreateChat);
 
 module.exports = router;

@@ -51,6 +51,8 @@ const getOrCreateChat = async (req, res, next) => {
 const getMessages = async (req, res, next) => {
   try {
     const { chatId } = req.params;
+    console.log(chatId,'chat id');
+    
     const messages = await Message.find({ chat: chatId })
       .sort({ createdAt: 1 })
       .populate('sender', 'username');
@@ -62,3 +64,14 @@ const getMessages = async (req, res, next) => {
 };
 
 module.exports = { getChats, getOrCreateChat, getMessages };
+
+
+
+
+
+
+
+
+
+
+
